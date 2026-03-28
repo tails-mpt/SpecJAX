@@ -1,0 +1,13 @@
+{
+    "target_model_type": "llama",
+    "exp_name": "llama32-3b-eagle3",
+    "num_epochs": 3,
+    "learning_rate": 8e-4,
+    "max_length": 1024,
+    "warmup_ratio": 0.03,
+    "batch_size": 8,
+    "grad_accum_steps": 4,
+    "log_every": 10,
+    "save_every": 100,
+    "ttt_length": 7
+}
