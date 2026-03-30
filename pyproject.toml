@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "specjax"
+version = "0.1.0"
+description = "EAGLE3 speculative decoding training in JAX/TPU"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "jax[tpu]>=0.4.30",
+    "optax>=0.2.0",
+    "safetensors>=0.4",
+    "transformers>=4.40",
+    "ml-dtypes>=0.4",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+wandb = ["wandb>=0.16"]
+dev = ["pytest>=7.0", "ruff>=0.4"]
+
+[project.urls]
+Repository = "https://github.com/tails-mpt/SpecJAX"
+Issues = "https://github.com/tails-mpt/SpecJAX/issues"
+
+[project.scripts]
+specjax-train = "specjax.train:main"
+specjax-eval = "specjax.eval:main"
+
+[tool.setuptools.packages.find]
+include = ["specjax*"]
+exclude = ["configs*", "scripts*"]

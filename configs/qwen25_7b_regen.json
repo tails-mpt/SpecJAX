@@ -1,0 +1,14 @@
+{
+    "target_model_type": "qwen25",
+    "exp_name": "qwen25-7b-eagle3-regen",
+    "num_epochs": 3,
+    "learning_rate": 4e-4,
+    "max_length": 1024,
+    "warmup_ratio": 0.03,
+    "batch_size": 4,
+    "grad_accum_steps": 4,
+    "log_every": 10,
+    "save_every": 0,
+    "ttt_length": 7,
+    "wandb_project": "qwen25-7b-eagle3-experiments"
+}

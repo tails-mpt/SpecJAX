@@ -1,0 +1,14 @@
+{
+    "target_model_type": "qwen2",
+    "exp_name": "ds-r1-qwen-7b-eagle3",
+    "num_epochs": 3,
+    "learning_rate": 8e-4,
+    "max_length": 512,
+    "warmup_ratio": 0.03,
+    "batch_size": 1,
+    "grad_accum_steps": 16,
+    "log_every": 10,
+    "save_every": 200,
+    "ttt_length": 7,
+    "wandb_project": "ds-r1-qwen-7b-eagle3-experiments"
+}
